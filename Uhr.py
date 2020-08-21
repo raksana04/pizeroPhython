@@ -1,6 +1,6 @@
 import time
 import datetime
-import pytz
+
 
 import scrollphathd
 from scrollphathd.fonts import font5x5
