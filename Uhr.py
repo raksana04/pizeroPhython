@@ -1,4 +1,4 @@
-mport time
+import time
 
 import scrollphathd
 from scrollphathd.fonts import font5x5
