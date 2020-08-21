@@ -1,4 +1,6 @@
 import time
+import datetime
+import pytz
 
 import scrollphathd
 from scrollphathd.fonts import font5x5
@@ -63,7 +65,9 @@ while True:
 
     # Display the time (HH:MM) in a 5x5 pixel font
     scrollphathd.write_string(
-        time.strftime("%H:%M", time.gmtime()),
+        local_tz = pytz.timezone('Europe/Berlin')
+        target_tz = pytz.timezone('UTC')
+        time.strftime("%H:%M", time.localtime()),
         x=0,                   # Align to the left of the buffer
         y=0,                   # Align to the top of the buffer
         font=font5x5,          # Use the font5x5 font we imported above
