@@ -23,8 +23,7 @@ BRIGHTNESS = 0.3
 #   (e.g. if you're using it in a Pimoroni Scroll Bot)
 # scrollphathd.rotate(degrees=180)
 
- local_tz = pytz.timezone('Europe/Berlin')
- target_tz = pytz.timezone('UTC')
+ 
 while True:
     scrollphathd.clear()
 
@@ -68,7 +67,7 @@ while True:
     # Display the time (HH:MM) in a 5x5 pixel font
     scrollphathd.write_string(
        
-        time.strftime("%H:%M", time.localtime()),
+        time.strftime("%H+1:%M", time.localtime()),
         x=0,                   # Align to the left of the buffer
         y=0,                   # Align to the top of the buffer
         font=font5x5,          # Use the font5x5 font we imported above
