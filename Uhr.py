@@ -67,7 +67,7 @@ while True:
     # Display the time (HH:MM) in a 5x5 pixel font
     scrollphathd.write_string(
        
-        time.strftime("%H+1:%M"),
+        time.strftime(1+"%H:%M"),
         x=0,                   # Align to the left of the buffer
         y=0,                   # Align to the top of the buffer
         font=font5x5,          # Use the font5x5 font we imported above
